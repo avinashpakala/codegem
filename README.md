@@ -16,6 +16,7 @@
 | [**Advanced DP**](patterns/advanced_dp.md) | Knapsack, Edit Distance, Burst Balloons, Bitmask |
 | [**Design Structures**](patterns/design_structures.md) | LRU Cache, Segment Tree, Trie, Design Twitter |
 | [**Google Specifics**](patterns/google_specifics.md) | KMP, Rolling Hash, Convex Hull, Robot Cleaner |
+| [**Pitfalls & Edge Cases**](patterns/pitfalls_edge_cases.md) | Empty/Null, Overflow, Cycles, Off-by-one |
 
 ## 📝 Problem Sets
 > Curated lists of problems linked to the patterns above.
