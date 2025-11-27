@@ -17,6 +17,18 @@
 | [**Design Structures**](patterns/design_structures.md) | LRU Cache, Segment Tree, Trie, Design Twitter |
 | [**Google Specifics**](patterns/google_specifics.md) | KMP, Rolling Hash, Convex Hull, Robot Cleaner |
 
+## 📝 Problem Sets
+> Curated lists of problems linked to the patterns above.
+
+| Category | Problem List |
+|----------|--------------|
+| **Arrays & Hashing** | [View Problems](problems/arrays_hashing_problems.md) |
+| **Two Pointers & Sliding Window** | [View Problems](problems/two_pointers_sliding_window_problems.md) |
+| **Stack, Queue & Heap** | [View Problems](problems/stack_queue_heap_problems.md) |
+| **Trees & Graphs** | [View Problems](problems/trees_graphs_problems.md) |
+| **DP & Greedy** | [View Problems](problems/dp_greedy_problems.md) |
+| **Advanced & Google** | [View Problems](problems/advanced_problems.md) |
+
 ---
 
 ## 🧠 General Problem Solving Framework
