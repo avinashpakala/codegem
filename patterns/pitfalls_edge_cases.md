@@ -68,3 +68,30 @@ Always test your code mentally against these:
 - **Scalability**: What if input is 10TB? (Can't fit in memory -> External Sort / MapReduce).
 - **Concurrency**: Thread safety? (Locks, Atomic operations).
 - **Real-world IDs**: IDs are not always `0..N-1`. Use HashMaps, not Arrays.
+
+---
+
+## 🚨 Problem-Specific Watchlist
+
+| Problem | The Trap / Edge Case | The Fix |
+|---------|----------------------|---------|
+| **Two Sum** | Array is not sorted. | Use HashMap, not Two Pointers. |
+| **3Sum** | Duplicate triplets in result. | Skip duplicates: `while l < r and nums[l] == nums[l-1]: l += 1`. |
+| **Container With Most Water** | Moving the taller line. | Always move the **shorter** line to try and find a taller one. |
+| **Merge Intervals** | Touching intervals `[1,2], [2,3]`. | Condition is `start <= last_end`, not `<`. |
+| **Insert Interval** | New interval is before/after all. | Handle edge cases where `newInterval` is added at start or end. |
+| **Reverse Linked List** | Cycle created. | Set `head.next = None` after recursion or loop. |
+| **Number of Islands** | Infinite recursion. | Mark node as visited **before** DFS calls. |
+| **Word Search** | Reusing cell in same path. | Mark board cell `#` before DFS, revert after (Backtrack). |
+| **Coin Change** | DP initialization. | Init with `amount + 1` (infinity), not `-1` or `0`. |
+| **Longest Increasing Subsequence** | Result is not at `dp[n-1]`. | Result is `max(dp)`, because LIS can end anywhere. |
+| **Climbing Stairs** | `n=1`. | Handle base case `if n <= 2: return n`. |
+| **Product Except Self** | Division by zero. | Don't use division. Use Prefix/Postfix arrays. |
+| **Search in Rotated Array** | Duplicates `[1,0,1,1,1]`. | Worst case $O(N)$ if duplicates exist. |
+| **Valid Parentheses** | Stack not empty at end. | Return `len(stack) == 0`, not just `True`. |
+| **Kth Largest Element** | Heap size. | Min Heap of size K. Root is Kth largest. (Don't use Max Heap unless popping N-K times). |
+| **Top K Frequent** | Bucket Sort index. | Frequencies can be `0..N`. Bucket array size `N+1`. |
+| **Median of Data Stream** | Heap balancing. | `len(small) == len(large)` or `len(small) == len(large) + 1`. |
+| **Course Schedule** | Disconnected graph. | Run DFS on **all** nodes `0..N-1`, not just node 0. |
+| **Clone Graph** | Infinite loop. | Use HashMap `old -> new` to return existing clone if visited. |
+| **Subarray Sum Equals K** | `k=0` or negative numbers. | Sliding window doesn't work. Must use Prefix Sum + HashMap. |
